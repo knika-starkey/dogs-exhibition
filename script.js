@@ -31,7 +31,7 @@ function onField(f, left, top) {
     left < field.left + field.width &&
     top > field.top &&
     top < field.top + field.height &&
-    (f == tan || f == pink)
+    (f == tan || f == pink || f == green || f == gold)
   ) {
     return true;
   }
@@ -46,6 +46,7 @@ function go(event) {
   let shiftY = event.pageY - coords.top;
   // console.log(shiftX + " " + shiftY);
   moveAt(event);
+
   // функция перемещения объекта под координаты курсора
   function moveAt(event) {
     // shiftX и shiftY - сдвиг курсора относительно верхнего левого угла картинки
@@ -67,18 +68,52 @@ function go(event) {
       if (breed == "tan") {
         tan.style.border = "2px solid green";
         pink.style.border = "none";
+        green.style.border = "none";
+        gold.style.border = "none";
       } else {
         tan.style.border = "2px solid red";
         pink.style.border = "none";
+        green.style.border = "none";
+        gold.style.border = "none";
       }
     }
     if (onField(pink, left, top)) {
       if (breed == "pink") {
         pink.style.border = "2px solid green";
         tan.style.border = "none";
+        green.style.border = "none";
+        gold.style.border = "none";
       } else {
         pink.style.border = "2px solid red";
         tan.style.border = "none";
+        green.style.border = "none";
+        gold.style.border = "none";
+      }
+    }
+    if (onField(green, left, top)) {
+      if (breed == "green") {
+        green.style.border = "2px solid green";
+        pink.style.border = "none";
+        tan.style.border = "none";
+        gold.style.border = "none";
+      } else {
+        green.style.border = "2px solid red";
+        pink.style.border = "none";
+        tan.style.border = "none";
+        gold.style.border = "none";
+      }
+    }
+    if (onField(gold, left, top)) {
+      if (breed == "gold") {
+        gold.style.border = "2px solid green";
+        tan.style.border = "none";
+        green.style.border = "none";
+        pink.style.border = "none";
+      } else {
+        gold.style.border = "2px solid red";
+        tan.style.border = "none";
+        green.style.border = "none";
+        pink.style.border = "none";
       }
     }
   }
@@ -111,6 +146,20 @@ function go(event) {
     }
     if (onField(pink, left, top)) {
       if (breed == "pink") {
+        dogsState[dog.id] = true;
+      } else {
+        dogsState[dog.id] = false;
+      }
+    }
+    if (onField(green, left, top)) {
+      if (breed == "green") {
+        dogsState[dog.id] = true;
+      } else {
+        dogsState[dog.id] = false;
+      }
+    }
+    if (onField(gold, left, top)) {
+      if (breed == "gold") {
         dogsState[dog.id] = true;
       } else {
         dogsState[dog.id] = false;
