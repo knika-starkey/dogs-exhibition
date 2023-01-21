@@ -1,5 +1,8 @@
 let tan = document.getElementById("tan");
 let pink = document.getElementById("pink");
+let green = document.getElementById("green");
+let gold = document.getElementById("gold");
+
 let showCoords = document.getElementById("showCoords");
 let state = document.getElementById("state");
 

@@ -19,13 +19,24 @@
         background: pink;
         display: inline-block;
       }
-
+      #green {
+        width: 400px;
+        height: 300px;
+        background: mediumseagreen;
+        display: inline-block;
+      }
+      #gold {
+        width: 400px;
+        height: 300px;
+        background: palegoldenrod;
+        display: inline-block;
+      }
       #showCoords,
       #state {
         position: absolute;
         width: 200px;
         height: 50px;
-        left: 840px;
+        right: 1%;
         top: 5px;
         border: 1px solid;
         padding-left: 5px;
@@ -43,6 +54,8 @@
   <body>
     <div id="tan" style="border: none"></div>
     <div id="pink" style="border: none"></div>
+    <div id="green" style="border: none"></div>
+    <div id="gold" style="border: none"></div>
     <img
       id="iris1"
       style="position: absolute; left: 10px; top: 320px"
@@ -75,6 +88,38 @@
       data-breed="tan"
       class="iris"
     />
+    <img
+      id="iris3"
+      style="position: absolute; left: 450px; top: 320px"
+      src="./images/1vkp_6484754564.jpg"
+      draggable="true"
+      data-breed="green"
+      class="iris"
+    />
+    <img
+      id="iris4"
+      style="position: absolute; left: 560px; top: 320px"
+      src="./images/corgi-dog-breed-surge-1666015298.jpg"
+      draggable="true"
+      data-breed="green"
+      class="iris"
+    />
+    <img
+      id="iris3"
+      style="position: absolute; left: 670px; top: 320px"
+      src="./images/golden-reteiever.jpg"
+      draggable="true"
+      data-breed="gold"
+      class="iris"
+    />
+    <img
+      id="iris4"
+      style="position: absolute; left: 780px; top: 320px"
+      src="./images/Golden-Retriever-standing-in-a-grassy-field-500x485.jpeg"
+      draggable="true"
+      data-breed="gold"
+      class="iris"
+    />
     <div id="showCoords"></div>
     <div id="state"></div>
     <input
@@ -82,7 +127,7 @@
       name=""
       onclick="check()"
       value="Check order"
-      style="position: absolute; left: 840px; top: 150px"
+      style="position: absolute; right: 1%; top: 150px"
     />
     <script src="./script.js"></script>
   </body>
