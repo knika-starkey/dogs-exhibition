@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #tan {
+        width: 400px;
+        height: 300px;
+        background: tan;
+        display: inline-block;
+      }
+
+      #pink {
+        width: 400px;
+        height: 300px;
+        background: pink;
+        display: inline-block;
+      }
+
+      #showCoords,
+      #state {
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        left: 840px;
+        top: 5px;
+        border: 1px solid;
+        padding-left: 5px;
+      }
+
+      #state {
+        top: 55px;
+      }
+
+      img {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tan" style="border: none"></div>
+    <div id="pink" style="border: none"></div>
+    <img
+      id="iris1"
+      style="position: absolute; left: 10px; top: 320px"
+      src="./images/022ed72c19150ea51cf3d90cc5867f10a3de3be5-500x500.jpg"
+      draggable="true"
+      data-breed="pink"
+      class="iris"
+    />
+    <img
+      id="iris2"
+      style="position: absolute; left: 120px; top: 320px"
+      src="./images/29892412edad014c8aa3de8d2e9f65d6.jpg"
+      draggable="true"
+      data-breed="pink"
+      class="iris"
+    />
+    <img
+      id="iris3"
+      style="position: absolute; left: 230px; top: 320px"
+      src="./images/GettyImages-138519494_trans_NvBQzQNjv4BqrXhEI-4tSWVCR5BednaDSboj51agoKXn1K2ndqwwHyw.jpg"
+      draggable="true"
+      data-breed="tan"
+      class="iris"
+    />
+    <img
+      id="iris4"
+      style="position: absolute; left: 340px; top: 320px"
+      src="./images/dog_old-english-sheepdog_desktop.webp"
+      draggable="true"
+      data-breed="tan"
+      class="iris"
+    />
+    <div id="showCoords"></div>
+    <div id="state"></div>
+    <input
+      type="button"
+      name=""
+      onclick="check()"
+      value="Check order"
+      style="position: absolute; left: 840px; top: 150px"
+    />
+    <script src="./script.js"></script>
+  </body>
+</html>
